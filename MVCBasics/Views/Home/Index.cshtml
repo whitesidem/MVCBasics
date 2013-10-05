@@ -1,0 +1,17 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "HomePage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    Helo There
+    <ul>
+        <li>
+            @Html.ActionLink("Products", "List", "Product");
+        </li>
+    </ul>
+</div>
