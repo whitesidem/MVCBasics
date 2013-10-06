@@ -40,6 +40,12 @@
     <Reference Include="Antlr3.Runtime, Version=3.3.1.7705, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.3.2.1\lib\net40-client\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\packages\Castle.Windsor.3.2.1\lib\net40\Castle.Windsor.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -126,6 +132,7 @@
     <Compile Include="App_Start\BootstrapBundleConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IocBootstrapContainer.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -133,6 +140,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="IOC\ControllersInstaller.cs" />
+    <Compile Include="IOC\InventoryDomainInstaller.cs" />
+    <Compile Include="IOC\IocControllerFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -247,6 +257,12 @@
     <None Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <None Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Scripts\jquery-1.9.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InventoryDomain\InventoryDomain.csproj">
+      <Project>{DE6F5488-8704-45BC-9416-6427D5E20357}</Project>
+      <Name>InventoryDomain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

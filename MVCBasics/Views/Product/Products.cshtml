@@ -1,4 +1,4 @@
-﻿@model dynamic
+﻿@model List<InventoryDomain.Models.ListableProduct>
 
 @{
     ViewBag.Title = "Products";
@@ -13,33 +13,26 @@
             Product Code
         </td>
         <td>
-            Set?
+            Price
+        </td>
+        <td>
+            Stock
         </td>
     </th>
+    @foreach (var product in Model)
+    {
     <tr>
         <td>
-            Product 1
+            @product.Sku        
         </td>
         <td>
-            true
+            @product.Price
+        </td>
+        <td>
+            @product.StockCount      
         </td>
     </tr>
-<   <tr>
-        <td>
-            Product 2
-        </td>
-        <td>
-            false
-        </td>
-    </tr>
-   <tr>
-        <td>
-            Product 3
-        </td>
-        <td>
-            true
-        </td>
-    </tr>
+    }
 </table>
 
 

@@ -5,7 +5,9 @@ using NUnit.Framework;
 namespace MVCBasicsTests
 {
     [TestFixture]
+    // ReSharper disable InconsistentNaming
     public class HomeController_Tests
+    // ReSharper restore InconsistentNaming
     {
         private HomeController _controller;
 
@@ -29,9 +31,13 @@ namespace MVCBasicsTests
         {
             //Arrange
             //Act
-            var result =_controller.Index() as ViewResult;;
+            var result =_controller.Index() as ViewResult;
+
             //Assert
-            Assert.That(result.ViewName,Is.EqualTo("Index"));
+            Assert.That(result, Is.Not.Null);
+            // ReSharper disable PossibleNullReferenceException
+            Assert.That(result.ViewName, Is.EqualTo("Index"));
+            // ReSharper restore PossibleNullReferenceException
         }
 
 

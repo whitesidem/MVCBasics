@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.1.1309.1617\lib\net40\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
     </Reference>
@@ -54,6 +57,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\InventoryDomain\InventoryDomain.csproj">
+      <Project>{DE6F5488-8704-45BC-9416-6427D5E20357}</Project>
+      <Name>InventoryDomain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MVCBasics\MVCBasics.csproj">
       <Project>{F9464FE6-B427-47D6-B254-40ACDDC1D2A1}</Project>
       <Name>MVCBasics</Name>
