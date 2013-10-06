@@ -1,0 +1,34 @@
+﻿using InventoryDomain.Interfaces;
+using InventoryDomain.Services;
+using NUnit.Framework;
+
+namespace InventoryDomainTests.Services
+{
+    [TestFixture]
+    public class CatalogueServiceTests
+    {
+        private ICatalogueService _service; 
+
+        [SetUp]
+        public void SetUp()
+        {
+            _service = new CatalogueService();
+        } 
+
+
+        [Test]
+        public void Listproducts_NormalUsage_ReturnsCollectionOfListableProducts()
+        {
+            //Arrange
+
+            //Act
+            var actual = _service.ListProducts();
+
+            //Assert
+            Assert.That(actual,Is.Not.Null);
+            Assert.That(actual.Count, Is.GreaterThan(0));
+        }
+
+
+    }
+}
