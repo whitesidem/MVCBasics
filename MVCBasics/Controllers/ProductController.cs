@@ -16,6 +16,7 @@ namespace MVCBasics.Controllers
         public ActionResult List()
         {
             var products = _catalogueService.ListProducts();
+
             return View("Products", products);
         }
     }

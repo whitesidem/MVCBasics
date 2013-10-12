@@ -4,18 +4,18 @@ namespace InventoryDomain.Models
     {
         public string Sku { get; set; }
         public decimal Price { get; set; }
-        public int StockCount { get; set; }
+        public bool HasStock { get; set; }
 
-        public ListableProduct(string sku, decimal price, int stockCount)
+        public ListableProduct(string sku, decimal price, bool hasStock)
         {
             Sku = sku;
             Price = price;
-            StockCount = stockCount;
+            HasStock = hasStock;
         }
 
         public override string ToString()
         {
-            return string.Format("{0} for {1} with stock: {2}", Sku, Price, StockCount);
+            return string.Format("{0} for {1} with stock: {2}", Sku, Price, HasStock);
         }
 
     }
