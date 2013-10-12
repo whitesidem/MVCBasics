@@ -8,11 +8,6 @@ namespace MVCBasics.Controllers
     {
         private ICatalogueService _catalogueService;
 
-        //public ProductController() : this(new CatalogueService())
-        //{
-            
-        //}
-
         public ProductController(ICatalogueService catalogueService)
         {
             _catalogueService = catalogueService;

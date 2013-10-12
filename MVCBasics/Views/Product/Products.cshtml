@@ -7,32 +7,37 @@
 
 <h2>@ViewBag.Title</h2>
 
-<table>
-    <th>
-        <td>
-            Product Code
-        </td>
-        <td>
-            Price
-        </td>
-        <td>
-            Stock
-        </td>
-    </th>
+<table id="productsTable">
+    <thead>
+        <tr>
+            <th>
+                Product Code
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Stock
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        
     @foreach (var product in Model)
     {
-    <tr>
-        <td>
-            @product.Sku        
-        </td>
-        <td>
-            @product.Price
-        </td>
-        <td>
-            @product.StockCount      
-        </td>
-    </tr>
+        <tr>
+            <td>
+                @product.Sku
+            </td>
+            <td>
+                @product.Price
+            </td>
+            <td>
+                @product.StockCount
+            </td>
+        </tr>
     }
+    </tbody>
 </table>
 
 
