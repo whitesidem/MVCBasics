@@ -1,6 +1,6 @@
-﻿* Html as Checbox the instoc
-* Use DataTable to format the table with sorting
-* Introduct new page to navigate to from Products
-* Back Nav to return to page and see if checkboxes work
+﻿ Html as Checbox the instoc  - DONE
+ Use DataTable to format the table with sorting - DONE
+ Introduce new page to navigate to from Products - DONE
+ Back Nav to return to page and see if checkboxes work - DONE
 * Formatting of page nicely
 * Microsoft Graph with zoom in ?
