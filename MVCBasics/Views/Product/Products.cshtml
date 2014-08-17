@@ -5,8 +5,6 @@
     ViewBag.Active = "Product";
 }
 
-<h2>@ViewBag.Title</h2>
-
 <div class="col-md-1">
 </div>  
 <div class="col-md-10">
@@ -39,7 +37,7 @@
                     <input type="checkbox"  checked="@product.HasStock" />
                 </td>
                 <td>
-                        @Html.ActionLink("Edit", "Index", "ProductDetail", new{id = 2}, new {@class = "btn btn-primary"})
+                        @Html.ActionLink("Edit", "Index", "ProductDetail", new{id = product.Id}, new {@class = "btn btn-primary"})
                 </td>
             </tr>
         }

@@ -5,6 +5,18 @@
     ViewBag.Active = "Product";
 }
 
-<h2>@ViewBag.Title</h2>
+@using (Html.BeginForm("Update","ProductDetail", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        @Html.LabelFor(m => m.Sku)
+        @Html.DisplayTextFor(m => m.Sku)
+        @Html.LabelFor(m => m.Price)
+        @Html.EditorFor(m => m.Price)
+        @Html.LabelFor(m => m.HasStock)
+        @Html.EditorFor(m => m.HasStock)
+        <input type="submit" value="Update"  />
+    </fieldset>
+}
 
-@Html.DisplayText(Model.Sku)
+
