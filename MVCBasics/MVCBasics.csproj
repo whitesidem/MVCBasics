@@ -365,7 +365,6 @@
     <Folder Include="Models\" />
     <Folder Include="Scripts\Project\Controllers\" />
     <Folder Include="Scripts\Tests\" />
-    <Folder Include="Views\ProductDetail\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -392,7 +391,7 @@
     <None Include="Scripts\DataTables-1.9.4\extras\Scroller\media\js\dataTables.scroller.min.js.gz" />
     <None Include="Scripts\DataTables-1.9.4\extras\TableTools\media\js\TableTools.min.js.gz" />
     <None Include="Scripts\jquery-1.9.1.min.map" />
-    <Content Include="ProductDetail.cshtml" />
+    <Content Include="Views\ProductDetail\ProductDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\InventoryDomain\InventoryDomain.csproj">
