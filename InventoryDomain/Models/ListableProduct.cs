@@ -2,12 +2,14 @@ namespace InventoryDomain.Models
 {
     public class ListableProduct
     {
+        public int Id { get; set; }
         public string Sku { get; set; }
         public decimal Price { get; set; }
         public bool HasStock { get; set; }
 
-        public ListableProduct(string sku, decimal price, bool hasStock)
+        public ListableProduct(int id, string sku, decimal price, bool hasStock)
         {
+            Id = id;
             Sku = sku;
             Price = price;
             HasStock = hasStock;

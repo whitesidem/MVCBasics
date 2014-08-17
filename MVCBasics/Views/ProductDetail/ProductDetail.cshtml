@@ -1,4 +1,4 @@
-﻿@model dynamic
+﻿@model InventoryDomain.Models.Product
 
 @{
     ViewBag.Title = "Product Detail";
@@ -7,3 +7,4 @@
 
 <h2>@ViewBag.Title</h2>
 
+@Html.DisplayText(Model.Sku)

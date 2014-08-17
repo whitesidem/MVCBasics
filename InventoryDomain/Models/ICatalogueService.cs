@@ -5,8 +5,7 @@ namespace InventoryDomain.Interfaces
 {
     public interface ICatalogueService
     {
-
         List<ListableProduct> ListProducts();
-
+        Product RetrieveProductById(int id);
     }
 }

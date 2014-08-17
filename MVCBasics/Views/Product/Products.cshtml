@@ -38,13 +38,20 @@
                 <td>
                     <input type="checkbox"  checked="@product.HasStock" />
                 </td>
+                <td>
+                        @Html.ActionLink("Edit", "Index", "ProductDetail", new{id = 2}, new {@class = "btn btn-primary"})
+                </td>
             </tr>
         }
     </tbody>
 </table>
 </div>
+<div class="col-md-1">
+</div>  
+<div class="col-md-12">
 <ul>
     <li>
-        @Html.ActionLink("Product Detail", "Index", "ProductDetail");
+        @Html.ActionLink("Product Detail", "Index", "ProductDetail", new { id = 1}, null);
     </li>
 </ul>
+</div>
